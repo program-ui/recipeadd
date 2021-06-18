@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "README.md": true,
+    ".vscode": true,
+    "CookAPI\\index.html": true,
+    "CookAPI\\main.css": true,
+    "CookAPI\\main.js": true,
+    "CookAPI\\image": true
+  }
+}
