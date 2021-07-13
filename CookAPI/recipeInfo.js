@@ -81,12 +81,11 @@ function exitModal(e) {
     
     document.getElementById('modal1').style.display = 'none';
     document.body.style.overflow = 'auto'
-    //CHANGED//
-    // const body = document.body;
-    // const scrollY = body.style.top;
-    // body.style.position = '';
-    // body.style.top = '';
-    // window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    //CHANGED//
+    const body = document.body;
+    const scrollY = body.style.top;
+    body.style.position = '';
+    body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    
   }
 }
