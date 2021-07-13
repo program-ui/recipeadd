@@ -1,0 +1,136 @@
+   :root{
+       --primary: rgba(111,247,232, 0.8)
+   }
+   html, body {
+       height: 100%;
+       width: 100%;
+       overflow-x: hidden;
+       line-height: 1.5;
+       font-size: 1.1rem;
+       background: whitesmoke;
+       box-sizing: border-box;
+       
+
+
+   }
+
+   body {
+    background: url(image/pexels-lukas-349609.jpg);
+    background-position: center;
+    background-size: cover;
+    background: linear-gradient(90deg, rgba(111,247,232, 0.1), rgba(111,247,232, 0.2)), url(image/pexels-lukas-349609.jpg) center / cover; 
+    background-attachment: fixed;
+    
+   }
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     height: 100%;
+     flex-direction: column;
+     
+}
+
+.search h1 {
+    font-size: 6rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+ form {
+    
+    width: 30vw;
+    display: flex;
+    box-shadow: 2px 0px 25px 2px #0DDDFF;
+    border-radius: 2rem;
+   
+} 
+
+.instruction {
+    margin: 2rem 0;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.input {
+    width: 90%;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    padding: 0 1rem;
+    outline: 0;
+    border: 0;
+    
+    
+}
+
+
+.button {
+    background: #6FF7E8;
+    color: #fff;
+    text-decoration: none;
+    width: 5rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+    outline: 0;
+    border: 0;
+    padding: 1px 0 1px 0px;
+}
+
+.button:hover {
+    background: rgba(111,247,232, 0.5)
+}
+
+.warning {
+    font-size: 2rem;
+    color: #7444e4;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 4rem;
+    display: none;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+  
+
+.title {
+    margin: 1.5rem 0 1rem 0;
+} 
+
+.search h1 {
+    font-size: 1.8rem;
+    
+}
+.warning {
+    font-size: 0.8rem;
+    margin-top: 3rem;
+}
+.instruction {
+    font-size: 0.6rem;
+}
+
+form {
+    width: 80vw;
+}
+
+
+
+}
+
+
+@media screen and (max-width: 280px) {
+   .input {
+       font-size: 0.8rem;
+   }     
+.button {
+    width: 3rem;
+    font-size: 1.3rem;
+}
+
+}
