@@ -66,12 +66,12 @@ popUp.innerHTML = output
       overlay.style.display = 'none'
     }, 300)
     //changed from overlay.style.display = 'none'
-    // document.body.style.overflow = 'auto'
-    const body = document.body;
-    const scrollY = body.style.top;
-    body.style.position = '';
-    body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    document.body.style.overflow = 'auto'
+    // const body = document.body;
+    // const scrollY = body.style.top;
+    // body.style.position = '';
+    // body.style.top = '';
+    // window.scrollTo(0, parseInt(scrollY || '0') * -1);
     ////////////changed/////////
   })
 } 
@@ -94,12 +94,12 @@ function exitModal(e) {
       overlay.style.display = 'none'
     }, 300)
     //changed from overlay.style.display = 'none'
-    // document.body.style.overflow = 'auto'
-    const body = document.body;
-    const scrollY = body.style.top;
-    body.style.position = '';
-    body.style.top = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+    document.body.style.overflow = 'auto'
+    // const body = document.body;
+    // const scrollY = body.style.top;
+    // body.style.position = '';
+    // body.style.top = '';
+    // window.scrollTo(0, parseInt(scrollY || '0') * -1);
     //changed
     
   }
