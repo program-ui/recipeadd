@@ -171,7 +171,6 @@ searchItems.addEventListener('click', (e) => {
     const loadingRecipe = document.querySelector('.loading2')
     loadingRecipe.classList.add('show')
     //changed
-    overlay.style.display = 'block'
     overlay.classList.add('fadeIn')
     overlay.classList.remove('fadeOut')
     //changed
@@ -179,10 +178,11 @@ searchItems.addEventListener('click', (e) => {
       generateModal(recipeID)
     document.body.style.overflow = 'hidden'
     //do overflow or fixed
-    const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-    const body = document.body;
-    body.style.position = 'fixed';
-    body.style.top = `-${scrollY}`;
+    // const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+    // const body = document.body;
+    // body.style.position = 'fixed';
+    // body.style.top = `-${scrollY}`;
+    ////////changed
     
     }
    

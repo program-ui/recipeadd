@@ -546,7 +546,7 @@ text-align: center;
 
 
 .fadeIn {
-display: block;
+display: block !important;
 animation: fade_in 0.5s
 }
 
