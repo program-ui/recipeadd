@@ -171,6 +171,7 @@ searchItems.addEventListener('click', (e) => {
     const loadingRecipe = document.querySelector('.loading2')
     loadingRecipe.classList.add('show')
     //changed
+    overlay.style.display = 'block'
     overlay.classList.add('fadeIn')
     overlay.classList.remove('fadeOut')
     //changed
