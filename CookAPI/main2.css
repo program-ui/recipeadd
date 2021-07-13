@@ -539,13 +539,43 @@ text-align: center;
   left: 0;
   z-index: 9999;
   background-color: transparent;
-  
+  /* /////////////////changed///////////// */
+  transition: all 1s;
+   display: none;
   }
 
 
+.fadeIn {
+display: block;
+animation: fade_in 0.5s
+}
 
+@keyframes fade_in {
+     0% {
+          transform: scale(0)
+     }
 
+     100% {
+          transform: scale(1)
+     }
+}
 
+.fadeOut {
+ animation: fade_out 0.5s;
+}
+
+@keyframes fade_out {
+     0% {
+          
+          transform: scale(1)
+     }
+    
+     100% {
+          transform: scale(0);
+     }
+}
+
+/* /////////////////changed///////////// */
 
 
 

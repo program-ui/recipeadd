@@ -1,6 +1,6 @@
 async function fetchID (id) {
     let getID = id
-    const infoURL = `https://api.spoonacular.com/recipes/${getID}/information?includeNutrition=false&&apiKey=3392c31fb2ac46fd98daba7ecc420ac9`
+    const infoURL = `https://api.spoonacular.com/recipes/${getID}/information?includeNutrition=false&&apiKey=6116c9a704804aeaad7bd2360ff4564c`
     const response = await fetch(infoURL)
     return response.json()
 }
@@ -58,7 +58,14 @@ popUp.innerHTML = output
  
   const closeBtn = document.querySelector('.recipe-close')
   closeBtn.addEventListener('click', () => {
+    //changed
+    overlay.style.display = 'block'
+    overlay.classList.remove('fadeIn')
+    overlay.classList.add('fadeOut')
+    setTimeout(() => {
       overlay.style.display = 'none'
+    }, 300)
+    //changed from overlay.style.display = 'none'
     document.body.style.overflow = 'auto'
     const body = document.body;
     const scrollY = body.style.top;
@@ -78,8 +85,14 @@ document.addEventListener('touchstart', (e) => exitModal(e));
 function exitModal(e) {
 
   if(e.target == document.getElementById('modal1')){
-    
-    document.getElementById('modal1').style.display = 'none';
+    //changed
+    overlay.style.display = 'block'
+    overlay.classList.remove('fadeIn')
+    overlay.classList.add('fadeOut')
+    setTimeout(() => {
+      overlay.style.display = 'none'
+    }, 300)
+    //changed from overlay.style.display = 'none'
     document.body.style.overflow = 'auto'
     const body = document.body;
     const scrollY = body.style.top;
@@ -89,3 +102,4 @@ function exitModal(e) {
     
   }
 }
+

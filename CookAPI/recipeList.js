@@ -154,7 +154,8 @@ window.onbeforeunload = function() {
 
 
 ///CAREFUL///
-overlay.style.display = 'none'
+//changed//
+// overlay.className = 'fadeOut'
 ///////////
 
 searchItems.addEventListener('click', (e) => {
@@ -169,8 +170,11 @@ searchItems.addEventListener('click', (e) => {
     </div>`
     const loadingRecipe = document.querySelector('.loading2')
     loadingRecipe.classList.add('show')
-    overlay.style.display = ''
-      const recipeID = button.parentElement.parentElement.id
+    //changed
+    overlay.classList.add('fadeIn')
+    overlay.classList.remove('fadeOut')
+    //changed
+    const recipeID = button.parentElement.parentElement.id
       generateModal(recipeID)
     document.body.style.overflow = 'hidden'
     //do overflow or fixed
@@ -286,7 +290,7 @@ else {
 
 async function fetchURL(input, x, page) {
     let search = input
-    const baseURL = `https://api.spoonacular.com/recipes/complexSearch?number=${x}&query=${search}&offset=${page*x}&apiKey=3392c31fb2ac46fd98daba7ecc420ac9`
+    const baseURL = `https://api.spoonacular.com/recipes/complexSearch?number=${x}&query=${search}&offset=${page*x}&apiKey=6116c9a704804aeaad7bd2360ff4564c`
     const response = await fetch(baseURL)
     return response.json()
 }

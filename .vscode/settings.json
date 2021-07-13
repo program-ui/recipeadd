@@ -4,6 +4,7 @@
     ".vscode": true,
     "CookAPI\\index.html": true,
     "CookAPI\\main.css": true,
-    "CookAPI\\image": true
+    "CookAPI\\image": true,
+    "CookAPI\\main.js": true
   }
 }
