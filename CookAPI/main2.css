@@ -632,7 +632,8 @@ animation: fade_in 0.5s
 /* ///////////// */
 /* changed */
 .wrapper {
-    height: 42vw;
+    
+    height: auto;
     width: 80%;
     padding: 0;
     margin: 0 auto 4rem;  
@@ -650,7 +651,7 @@ font-size: 3vw;
 .recipe-btn {
 
 padding: 0.3rem 1.5rem;
-margin-bottom: 2rem;
+margin-bottom: 1.3rem;
 font-size: 3vw;
 
 }
