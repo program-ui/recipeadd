@@ -29,7 +29,6 @@
   top: 0;
   width: 100%;
   height: 100vh;
-  /* changed */
   z-index: -10;
   background: linear-gradient(90deg, rgba(111,247,232, 0.1), rgba(111,247,232, 0.2)), url(image/pexels-lukas-349609.jpg) no-repeat center; 
   -webkit-background-size: cover;
@@ -634,6 +633,17 @@ animation: fade_in 0.5s
 .title h3 {
 font-size: 3.5vw;
 }
+
+
+.recipe-close{
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+     right: 4%;
+     top: 3%;
+     padding: 1px 0 1px 0;
+}
+
 /* changed */
 /* /////////// */
 }
