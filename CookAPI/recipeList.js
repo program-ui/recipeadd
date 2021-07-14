@@ -153,10 +153,7 @@ window.onbeforeunload = function() {
 
 
 
-///CAREFUL///
-//changed//
-// overlay.className = 'fadeOut'
-///////////
+
 
 searchItems.addEventListener('click', (e) => {
     e.preventDefault()
