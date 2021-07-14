@@ -319,7 +319,7 @@ async function getRecipe(input, x, page) {
                 <img class="image" src="https://spoonacular.com/recipeImages/${i.id}-636x393.jpg" alt="">
             </div>
             <div class="title">
-                <h3>${i.title}</h3>
+                <h3 class="text">${i.title}</h3>
             </div>
            <a class="recipe-btn" tabindex="-1" href="">Recipe</a>
             </div>
@@ -336,6 +336,19 @@ async function getRecipe(input, x, page) {
     }
     else if (screen && screen.width < 767) {
         swipe.style.display = 'block'
+    }
+    if ((screen && screen.width < 900) && (screen && screen.width > 600)) {
+        const itemsX = document.querySelectorAll('.text')
+        const items = Array.from (itemsX);
+        items.forEach(i => {
+            if(i.textContent.length>41 && i.textContent.length<59) {
+               return i.classList.add('small')
+            }
+            if(i.textContent.length>60) {
+              return i.classList.add('xSmall')
+            }
+        })
+         console.log(items);
     }
     }
     
