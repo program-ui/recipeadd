@@ -94,13 +94,12 @@ function exitModal(e) {
       overlay.style.display = 'none'
     }, 300)
     //changed from overlay.style.display = 'none'
-    // document.body.style.overflow = 'auto'
-    const body = document.body;
-    const scrollY = body.style.top;
-    body.style.position = '';
-    console.log(scrollY);
-    window.scrollTo(0, -parseInt(scrollY, 10))
-    body.style.top = '';
+    document.body.style.overflow = 'auto'
+    // const body = document.body;
+    // const scrollY = body.style.top;
+    // body.style.position = '';
+    // window.scrollTo(0, -parseInt(scrollY, 10))
+    // body.style.top = '';
     
     //changed
     

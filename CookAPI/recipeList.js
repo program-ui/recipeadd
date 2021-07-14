@@ -173,13 +173,13 @@ searchItems.addEventListener('click', (e) => {
     //changed
     const recipeID = button.parentElement.parentElement.id
       generateModal(recipeID)
-    // document.body.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden'
     //do overflow or fixed
-    const body = document.body;
-    body.style.top = `-${window.scrollY}px`
-    console.log(window.scrollY);
-    console.log(body.style.top);
-    body.style.position = 'fixed';
+    // const body = document.body;
+    // body.style.top = `-${window.scrollY}px`
+    // console.log(window.scrollY);
+    // console.log(body.style.top);
+    // body.style.position = 'fixed';
    
    
     ////////changed
