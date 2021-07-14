@@ -173,12 +173,15 @@ searchItems.addEventListener('click', (e) => {
     //changed
     const recipeID = button.parentElement.parentElement.id
       generateModal(recipeID)
-    document.body.style.overflow = 'hidden'
+    // document.body.style.overflow = 'hidden'
     //do overflow or fixed
-    // const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-    // const body = document.body;
-    // body.style.position = 'fixed';
-    // body.style.top = `-${scrollY}`;
+    const body = document.body;
+    body.style.top = `-${window.scrollY}px`
+    console.log(window.scrollY);
+    console.log(body.style.top);
+    body.style.position = 'fixed';
+   
+   
     ////////changed
     
     }
@@ -186,11 +189,6 @@ searchItems.addEventListener('click', (e) => {
 })
 
 
-  
-
-window.addEventListener('scroll', () => {
-  document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
-});
 
 
 
@@ -204,8 +202,6 @@ else {
    getRecipe(input.value, 10, page) 
 }
 }
-
-
 
 
 
@@ -289,7 +285,7 @@ else {
 
 async function fetchURL(input, x, page) {
     let search = input
-    const baseURL = `https://api.spoonacular.com/recipes/complexSearch?number=${x}&query=${search}&offset=${page*x}&apiKey=6116c9a704804aeaad7bd2360ff4564c`
+    const baseURL = `https://api.spoonacular.com/recipes/complexSearch?number=${x}&query=${search}&offset=${page*x}&apiKey=3392c31fb2ac46fd98daba7ecc420ac9`
     const response = await fetch(baseURL)
     return response.json()
 }
@@ -337,19 +333,7 @@ async function getRecipe(input, x, page) {
     else if (screen && screen.width < 767) {
         swipe.style.display = 'block'
     }
-    if ((screen && screen.width > 600) && (screen && screen.width < 900)) {
-        const itemsX = document.querySelectorAll('.text')
-        const items = Array.from (itemsX);
-        items.forEach(i => {
-            if(i.textContent.length>41 && i.textContent.length<59) {
-               return i.classList.add('small')
-            }
-            if(i.textContent.length>60) {
-              return i.classList.add('xSmall')
-            }
-        })
-         console.log(items);
-    }
+
     }
     
    
