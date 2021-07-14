@@ -337,7 +337,7 @@ async function getRecipe(input, x, page) {
     else if (screen && screen.width < 767) {
         swipe.style.display = 'block'
     }
-    if ((screen && screen.width < 900) && (screen && screen.width > 600)) {
+    if (screen && screen.width < 900) {
         const itemsX = document.querySelectorAll('.text')
         const items = Array.from (itemsX);
         items.forEach(i => {
