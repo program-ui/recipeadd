@@ -167,10 +167,8 @@ searchItems.addEventListener('click', (e) => {
     </div>`
     const loadingRecipe = document.querySelector('.loading2')
     loadingRecipe.classList.add('show')
-    //changed
     overlay.classList.add('fadeIn')
     overlay.classList.remove('fadeOut')
-    //changed
     const recipeID = button.parentElement.parentElement.id
       generateModal(recipeID)
     document.body.style.overflow = 'hidden'
@@ -182,7 +180,6 @@ searchItems.addEventListener('click', (e) => {
     // body.style.position = 'fixed';
    
    
-    ////////changed
     
     }
    

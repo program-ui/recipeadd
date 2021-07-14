@@ -58,7 +58,6 @@ popUp.innerHTML = output
  
   const closeBtn = document.querySelector('.recipe-close')
   closeBtn.addEventListener('click', () => {
-    //changed
     overlay.style.display = 'block'
     overlay.classList.remove('fadeIn')
     overlay.classList.add('fadeOut')
@@ -72,7 +71,7 @@ popUp.innerHTML = output
     // body.style.position = '';
     // body.style.top = '';
     // window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    ////////////changed/////////
+
   })
 } 
 
@@ -86,7 +85,6 @@ document.addEventListener('touchstart', (e) => exitModal(e));
 function exitModal(e) {
 
   if(e.target == document.getElementById('modal1')){
-    //changed
     overlay.style.display = 'block'
     overlay.classList.remove('fadeIn')
     overlay.classList.add('fadeOut')
@@ -101,7 +99,7 @@ function exitModal(e) {
     // window.scrollTo(0, -parseInt(scrollY, 10))
     // body.style.top = '';
     
-    //changed
+    
     
   }
 }
