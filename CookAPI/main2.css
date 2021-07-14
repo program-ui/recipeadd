@@ -611,6 +611,16 @@ animation: fade_in 0.5s
     
 }
 
+.recipe-close{
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+     right: 4%;
+     top: 3%;
+     padding: 1px 0 1px 0;
+}
+
+
 .instruction {
     font-size: 1rem;
 }
@@ -622,26 +632,27 @@ animation: fade_in 0.5s
 /* ///////////// */
 /* changed */
 .wrapper {
-    height: 68vw;
+    height: 42vw;
+    width: 80%;
+    padding: 0;
+    margin: 0 auto 4rem;  
 }
 .image {
- height: 32vw;
+  height: 24vw;
 }
 .title {
     margin-top: 1.5rem;
 }
 .title h3 {
-font-size: 3.5vw;
+font-size: 3vw;
 }
 
+.recipe-btn {
 
-.recipe-close{
-    width: 2rem;
-    height: 2rem;
-    font-size: 1rem;
-     right: 4%;
-     top: 3%;
-     padding: 1px 0 1px 0;
+padding: 0.3rem 1.5rem;
+margin-bottom: 2rem;
+font-size: 3vw;
+
 }
 
 /* changed */
@@ -668,6 +679,15 @@ grid-gap: 30px;
     width: 4rem;
 }
 
+.wrapper {
+    height: auto;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 4rem 0;
+}
+
+
 .image{
     /* changed */
     height: 72vw;
@@ -680,15 +700,19 @@ grid-gap: 30px;
 .title h3 {
 font-size: 7.8vw;
 }
+
+.recipe-btn {
+
+padding: 0.7rem 2rem;
+margin-bottom: 0rem;
+font-size: 1.5rem;
+
+}
+
+
 /* changed */
 
-.wrapper {
-    height: auto;
-    border-radius: 10px;
-    margin: 0 0 4rem 0;
-    padding: 0 
-    
-}
+
 
 .item:last-child > .wrapper {
     margin: 0 0 2rem 0;
@@ -725,14 +749,6 @@ form {
     padding: 1rem;
 }
 
-.recipe-close{
-    width: 2rem;
-    height: 2rem;
-    font-size: 1rem;
-     right: 4%;
-     top: 3%;
-     padding: 1px 0 1px 0;
-}
 
 .recipe-title {
 font-size: 1.5rem;    
