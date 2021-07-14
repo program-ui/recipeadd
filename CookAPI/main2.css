@@ -659,10 +659,18 @@ grid-gap: 30px;
 }
 
 .image{
-    height: 270px;
+    /* changed */
+    height: 72vw;
+    /* height: 270px; */
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }    
+
+/* changed */
+.title h3 {
+font-size: 7.8vw;
+}
+/* changed */
 
 .wrapper {
     height: auto;
