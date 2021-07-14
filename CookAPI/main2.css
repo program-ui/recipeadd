@@ -197,7 +197,7 @@ transition: 0.2s ease-in;
     height: 90%;
     padding: 2rem;
     /* changed */
-    overflow-y: scroll;
+    overflow-y: auto;
    -webkit-overflow-scrolling: touch;
     
 }
