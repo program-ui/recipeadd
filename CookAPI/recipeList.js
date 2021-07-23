@@ -284,7 +284,7 @@ else {
 
 async function fetchURL(input, x, page) {
     let search = input
-    const baseURL = `https://api.spoonacular.com/recipes/complexSearch?number=${x}&query=${search}&offset=${page*x}&apiKey=3392c31fb2ac46fd98daba7ecc420ac9`
+    const baseURL = `https://api.spoonacular.com/recipes/complexSearch?number=${x}&query=${search}&offset=${page*x}&apiKey=6116c9a704804aeaad7bd2360ff4564c`
     const response = await fetch(baseURL)
     return response.json()
 }
