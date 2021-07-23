@@ -96,10 +96,12 @@ form.addEventListener("submit", (e) => {
     prevInputs.push(input.value)
     loadBtn.style.display = 'none'
     swipe.style.display = 'none'
+    //changed
+    last.style.display='flex'
     getRecipes(0)
     page = 1
     form.reset()
-    io.observe(last)
+    // io.observe(last) changed
     
     
 })
@@ -293,15 +295,15 @@ async function getRecipe(input, x, page) {
     const info = await fetchURL(input, x, page)
     const data = info.results
     let output = ''
-    if(data.length == 0 || data === undefined )
+    if(data.length === 0 || data === undefined )
     {
-        
-        last.classList.remove('show')
-        setTimeout(function(){ 
+    last.classList.remove('show')
+    setTimeout(function(){ 
     warning.style.display = 'block'
     }, 
     200); 
     loadBtn.style.display = 'none'
+    last.style.display='none'
     }
     else {
     data.forEach((i) => {
@@ -321,6 +323,7 @@ async function getRecipe(input, x, page) {
          searchItems.insertAdjacentHTML('beforeend', output)
          warning.style.display = 'none'
          last.classList.remove('show')
+         io.observe(last)
     if (screen && screen.width > 767){
     setTimeout(function(){ 
     loadBtn.style.display = 'block'
