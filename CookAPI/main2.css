@@ -386,6 +386,21 @@ background: rgb(173, 97, 173);
     -webkit-animation-delay: 1.2s;
 }
 
+/* changed */
+.ball.fast{
+   animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+} 
+.ball:nth-of-type(2).fast{
+     animation-delay: 0.1s;
+    -webkit-animation-delay: 0.1s;
+} 
+.ball:nth-of-type(3).fast{
+  	animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+} 
+/* changed */
+
 @keyframes jump {
 	0%, 100% {
 		transform: translateY(0);
@@ -542,7 +557,6 @@ text-align: center;
   left: 0;
   z-index: 9999;
   background-color: transparent;
-  /* /////////////////changed///////////// */
   transition: all 1s;
    display: none;
   }
@@ -578,7 +592,7 @@ animation: fade_in 0.5s
      }
 }
 
-/* /////////////////changed///////////// */
+
 
 
 
@@ -630,8 +644,7 @@ animation: fade_in 0.5s
     font-size: 1.4rem;
 }
 
-/* ///////////// */
-/* changed */
+
 .wrapper {
     
     height: auto;
@@ -658,8 +671,6 @@ font-size: 3vw;
 }
 
 
-/* changed */
-/* /////////// */
 }
 
 @media screen and (max-width: 768px) {
@@ -692,14 +703,11 @@ grid-gap: 30px;
 
 
 .image{
-    /* changed */
     height: 72vw;
-    /* height: 270px; */
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }    
 
-/* changed */
 .title h3 {
 font-size: 7.8vw;
 }
@@ -711,11 +719,6 @@ margin-bottom: 0rem;
 font-size: 1.5rem;
 
 }
-
-
-/* changed */
-
-
 
 .item:last-child > .wrapper {
     margin: 0 0 2rem 0;

@@ -10,6 +10,12 @@ const swipe = document.querySelector('.swipe')
 const loadingRecipe = document.querySelector('.loading2')
 const last = document.querySelector('.loading')
 const overlay = document.getElementById('modal1')
+
+// changed
+const ball1 = document.querySelector("body > div.loading > div:nth-child(1)")
+const ball2 = document.querySelector("body > div.loading > div:nth-child(2)")
+const ball3 = document.querySelector("body > div.loading > div:nth-child(3)")
+// changed
 // const baseURL = `https://api.spoonacular.com/recipes/complexSearch?number=${x}&query=${search}&offset=${page*x}&apiKey=3392c31fb2ac46fd98daba7ecc420ac9`
 
 // const baseURL2 = `https://api.spoonacular.com/recipes/complexSearch?number=${x}&query=${search}&offset=${page*x}&apiKey=6116c9a704804aeaad7bd2360ff4564c` 
@@ -36,20 +42,18 @@ const onIntersection = (entries) => {
     }
 }
 
-const io = new IntersectionObserver(onIntersection, options)
-
-
-io.unobserve(last)
+let io = new IntersectionObserver(onIntersection, options)
 
 
 
 let yDown = null;  
 let page = 1                                                    
 function touchStart(e) {                                         
-                                        
+                                      
     yDown = e.touches[0].clientY;                                      
 };                                                
 function touchMove(e) {
+   
     if ( ! yDown ) {
         return;
     }
@@ -63,25 +67,34 @@ function touchMove(e) {
          let input = sessionStorage.getItem('search-input')
          swipe.style.display = 'none'
          getRecipe(input, 10, page)
+         
       }
       else {
+    
      swipe.style.display = 'none'
      getRecipe(prevInputs[prevInputs.length - 1], 10, page)
+      
      }
 
      page += 1
    
-
+     
     }                                                                
     
     /* reset values */
    
     yDown = null;
+    
+
     }
 }
 
 
-
+const ballFast = () => {
+ball1.classList.add('fast')
+ball2.classList.add('fast')
+ball3.classList.add('fast')
+}
 
 
 
@@ -96,12 +109,13 @@ form.addEventListener("submit", (e) => {
     prevInputs.push(input.value)
     loadBtn.style.display = 'none'
     swipe.style.display = 'none'
-    //changed
-    last.style.display='flex'
+    last.style.display= 'flex'
     getRecipes(0)
     page = 1
     form.reset()
-    // io.observe(last) changed
+    //changed//
+    ballFast()
+    
     
     
 })
@@ -120,40 +134,37 @@ loadBtn.addEventListener('click', (e) => {
 
 
 
-let firstRecipe = () => {
-    let input = sessionStorage.getItem('search-input')
-    let page = 0
-if (screen && screen.width > 767){
-    getRecipe(input, 20, page)
+// let firstRecipe = () => {
+//     let input = sessionStorage.getItem('search-input')
+//     let page = 0
+// if (screen && screen.width > 767){
+//     getRecipe(input, 20, page)
     
     
-}
-else {
-   getRecipe(input, 10, page) 
-}
-}
+// }
+// else {
+//    getRecipe(input, 10, page) 
+// }
+// }
 
 
-function getFirstRecipe() {
-if(sessionStorage.getItem("search-input") === null) { 
-  return; }
+// function getFirstRecipe() {
+// if(sessionStorage.getItem("search-input") === null) { 
+//   return; }
 
- else {
-     firstRecipe()
-      io.observe(last)
- } 
-}
+//  else {
+//      firstRecipe()
+//       io.observe(last)
+//  } 
+// }
 
-getFirstRecipe()
+// getFirstRecipe()
+
+
 
 window.onbeforeunload = function() {
   sessionStorage.clear();
 };
-
-
-
-
-
 
 
 
@@ -190,8 +201,6 @@ searchItems.addEventListener('click', (e) => {
 
 
 
-
-
 let getRecipes = (page) => {
     if (screen && screen.width > 767){
     getRecipe(input.value, 20, page)
@@ -203,91 +212,13 @@ else {
 }
 
 
-
-
-
-
-// async function fetchID (id) {
-//     let getID = id
-//     const infoURL = `https://api.spoonacular.com/recipes/${getID}/information?includeNutrition=false&&apiKey=6116c9a704804aeaad7bd2360ff4564c`
-//     const response = await fetch(infoURL)
-//     return response.json()
-// }
-
-
-
-// async function generateModal(id) {
-// const data = await fetchID(id)
-// const popUp = document.querySelector('.recipe-info')
-// const loadingRecipe = document.querySelector('.loading2')
-// let list = ''
-// data.extendedIngredients.forEach ((i) =>{
-// list += 
-// `<li>
-//     <p class="amount">${i.amount + " " + i.unit}</p>
-//     <img class="ingredient-img" onerror="this.src='./image/noimage.png'" src="https://spoonacular.com/cdn/ingredients_100x100/${i.image}" alt="">
-
-//     <p class="ingredient-name">${i.name}</p>
-// </li>`
-// })
-
-// let instruction = ''
-// data.analyzedInstructions[0].steps.forEach((i) => {
-//    instruction += `<li class="step">${i.step}</li>`
-// })
-
-// let output = ''
-// output += 
-// `<button class="recipe-close"><i class="fas fa-times"></i></button>
-
-// <div class="recipe-summary">
-    
-//  <h1 class="recipe-title">${data.title}</h1>
-//     <div class="recipe-ingredient">
-//     <h3 class="ingredient-title">Ingredients</h3>
-//      <ul class="ingredient-list">
-         
-//      ${list}
-     
-//         </ul>
-//         </div>
-//         <div class="recipe-instruction">
-//         <h3>Instructions</h3>
-//         <ul class="instruction-list">
-//        ${instruction}
-//     </ul>
-//     </div>
-     
-//     <img class="recipe-img" src="" alt="">
-//     <a class="more-info" target="_blank" href="${data.spoonacularSourceUrl}">More Info</a>
-//     <div class="last"></div>
-// </div>`
-// loadingRecipe.classList.remove('show')
-// popUp.innerHTML = output
-  
- 
-//   const closeBtn = document.querySelector('.recipe-close')
-//   closeBtn.addEventListener('click', () => {
-//       popUp.style.display = 'none'
-//     document.body.style.overflow = 'auto'
-//     const body = document.body;
-//     const scrollY = body.style.top;
-//     body.style.position = '';
-//     body.style.top = '';
-//     window.scrollTo(0, parseInt(scrollY || '0') * -1);
-//   })
-// } 
-
-
-
-
-
 async function fetchURL(input, x, page) {
     let search = input
-    const baseURL = `https://api.spoonacular.com/recipes/complexSearch?number=${x}&query=${search}&offset=${page*x}&apiKey=6116c9a704804aeaad7bd2360ff4564c`
+    const baseURL = `https://api.spoonacular.com/recipes/complexSearch?number=${x}&query=${search}&offset=${page*x}&apiKey=3392c31fb2ac46fd98daba7ecc420ac9`
     const response = await fetch(baseURL)
     return response.json()
 }
+
 
 
 async function getRecipe(input, x, page) {
@@ -303,9 +234,10 @@ async function getRecipe(input, x, page) {
     }, 
     200); 
     loadBtn.style.display = 'none'
-    last.style.display='none'
+    //  changed //
+     last.style.display= 'none'
     }
-    else {
+    else if(data.length > 0){
     data.forEach((i) => {
         output += `
          <div class="item" id="${i.id}">
@@ -324,6 +256,8 @@ async function getRecipe(input, x, page) {
          warning.style.display = 'none'
          last.classList.remove('show')
          io.observe(last)
+         console.log('observer triggered');
+       
     if (screen && screen.width > 767){
     setTimeout(function(){ 
     loadBtn.style.display = 'block'
@@ -335,8 +269,7 @@ async function getRecipe(input, x, page) {
     }
 
     }
-    
-   
+  
 }
 
 

@@ -1,6 +1,6 @@
 async function fetchID (id) {
     let getID = id
-    const infoURL = `https://api.spoonacular.com/recipes/${getID}/information?includeNutrition=false&&apiKey=6116c9a704804aeaad7bd2360ff4564c`
+    const infoURL = `https://api.spoonacular.com/recipes/${getID}/information?includeNutrition=false&&apiKey=3392c31fb2ac46fd98daba7ecc420ac9`
     const response = await fetch(infoURL)
     return response.json()
 }
