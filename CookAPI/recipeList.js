@@ -258,7 +258,7 @@ async function getRecipe(input, x, page) {
          io.observe(last)
          console.log('observer triggered');
        
-    if (screen && screen.width > 767){
+    if (screen && screen.width > 767 && data.length === 20){
     setTimeout(function(){ 
     loadBtn.style.display = 'block'
     }, 
