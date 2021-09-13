@@ -2,7 +2,7 @@
        --primary: rgba(111,247,232, 0.8)
    }
    html, body {
-       width: 100%;
+       width: 100vw;
        line-height: 1.5;
        font-size: 1.1rem;
        box-sizing: border-box;
@@ -27,7 +27,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   z-index: -10;
   background: linear-gradient(90deg, rgba(111,247,232, 0.1), rgba(111,247,232, 0.2)), url(image/pexels-lukas-349609.jpg) no-repeat center; 
@@ -36,6 +36,8 @@
   -o-background-size: cover;
   background-size: cover;
 }
+
+
 
 
 .search {
@@ -593,11 +595,13 @@ animation: fade_in 0.5s
      }
 }
 
-
-
+      
 
 
 @media screen and (max-width: 1224px) {
+
+
+ 
     .wrapper {
         margin: 0 0 4rem 0;
     }
@@ -614,6 +618,8 @@ animation: fade_in 0.5s
 }
 
 }
+
+
 
 @media screen and (max-width: 900px) {
 
